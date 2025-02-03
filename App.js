@@ -7,13 +7,13 @@ const ContactsApp = () => {
     const [newContact, setNewContact] = useState({ name: '', email: '', phone: '', address: '' });
     const [searchTerm, setSearchTerm] = useState('');
 
-    // Fetch contacts from the backend
+   
     useEffect(() => {
         axios.get('http://localhost:5000/contacts')
             .then(response => setContacts(response.data));
     }, []);
 
-    // Handle adding a new contact
+    
     const handleAddContact = () => {
         axios.post('http://localhost:5000/contacts', newContact)
             .then(response => {
@@ -22,24 +22,24 @@ const ContactsApp = () => {
             });
     };
 
-    // Handle deleting a contact
+   
     const handleDeleteContact = (id) => {
         axios.delete(`http://localhost:5000/contacts/${id}`)
             .then(() => setContacts(contacts.filter(contact => contact._id !== id)));
     };
 
-    // Handle editing a contact
+    
     const handleEditContact = (id) => {
         const contactToEdit = contacts.find(contact => contact._id === id);
         setNewContact(contactToEdit);
     };
 
-    // Filter contacts based on the search term
+   
     const filteredContacts = contacts.filter(contact =>
         contact.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Sort contacts alphabetically by name
+    
     const sortedContacts = filteredContacts.sort((a, b) => a.name.localeCompare(b.name));
 
     return (
