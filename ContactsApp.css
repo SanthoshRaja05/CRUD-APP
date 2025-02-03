@@ -1,0 +1,108 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('D:\zepto\crud\public\images\image1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centering the Contact Manager */
+.container {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for a modern look */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text inside the container */
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Search Bar */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Contact Form */
+.container input {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+}
+
+/* Add Contact Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Contact List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Edit and Delete Buttons */
+li button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+li button:first-of-type {
+    background: #ffc107;
+    color: black;
+}
+
+li button:first-of-type:hover {
+    background: #e0a800;
+}
+
+li button:last-of-type {
+    background: #dc3545;
+    color: white;
+}
+
+li button:last-of-type:hover {
+    background: #c82333;
+}
